@@ -1,0 +1,7 @@
+@media (max-width: 769px) {
+    #menu {
+        background: #fffdf7;
+        width: 270px;
+        height: 100vh;
+    }
+}

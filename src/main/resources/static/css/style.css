@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: #e5e7eb;
+  position: relative;
+  display: flex;
+}
+
+#menu {
+  background: #fffdf7;
+  width: 264px;
+  height: 100vh;
+}
+
+#menu .logo {
+  display: flex;
+  align-items: center;
+  padding: 30px 0 0 30px;
+}
+
+#menu .logo img {
+  height: 50px;
+  margin-right: 5px;
+}
+
+#menu .items {
+  margin-top: 40px;
+}
+
+#menu .items li {
+  list-style: none;
+  padding: 15px 0;
+  transition: 0.3s ease;
+}
+
+#menu .items li:hover {
+  background: rgb(223, 223, 226);
+  cursor: pointer;
+}
+
+#menu .items li:nth-child(1) {
+  border-left: 4px solid rgb(74, 75, 77);
+}
+
+#menu .items li i {
+  color: rgb(74, 75, 77);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 10px 0 25px;
+}
+
+#menu .items li:hover i,
+#menu .items li:hover a {
+  color: rgb(46, 47, 48);
+}
+
+#menu .items li:hover a {
+  transform: translateX(20px);
+}
+
+#menu .items li a {
+  text-decoration: none;
+  color: rgb(74, 75, 77);
+  font-weight: 300px;
+  transition: 0.3s ease;
+}
+
+#menu .sys-desc {
+  padding: 260px 0 0px 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu .sys-desc h6 {
+  color: #140c68;
+  line-height: 15pt;
+}
+
+#interface {
+  width: 100%;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+#interface .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffdf7;
+  padding: 0;
+  border-bottom: 3px solid rgb(86, 86, 87);
+}
+
+#interface .navigation .n1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#menu-btn {
+  display: none;
+  color: rgb(46, 47, 48);
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#interface .navigation .n1 img {
+  padding: 0;
+  width: 520%;
+  height: 3rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#interface .navigation .profile {
+  display: flex;
+  padding: 0.6rem 1.2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#interface .navigation .profile i {
+  margin-right: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#interface .navigation .profile img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#interface .scrollabless {
+  height: 100vh;
+  overflow: auto;
+}
+
+#interface .i-name {
+  color: rgb(74, 75, 77);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+
+#interface .values {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#interface .values .val-box {
+  background: #fffdf7;
+  width: 235px;
+  padding: 1.4rem 1.7rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#interface .values .val-box i {
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fffdf7;
+  margin-right: 1rem;
+}
+
+#interface .values .val-box:nth-child(1) i {
+  background: #ffba08;
+}
+
+#interface .values .val-box:nth-child(2) i {
+  background: #f48c06;
+}
+
+#interface .values .val-box:nth-child(3) i {
+  background: #dc2f02;
+}
+
+#interface .values .val-box:nth-child(4) i {
+  background: rgb(4, 79, 150);
+}
+
+#interface .values .val-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#interface .values .val-box span {
+  font-size: 15px;
+  color: rgb(74, 75, 77);
+}
+
+#interface .opt-bar {
+  width: 95.5%;
+  margin: 2rem 0 2rem 1.4rem;
+  background: #fffdf7;
+  border-radius: 5px;
+  align-items: center;
+}
+
+#interface .opt-bar .optionss {
+  padding: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#interface .opt-bar .optionss .search {
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px 10px;
+  border: 1px solid rgb(101, 101, 102);
+  border-radius: 5px;
+}
+
+#interface .opt-bar .optionss .search input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+#interface .opt-bar .optionss .search i {
+  margin-right: 14px;
+  color: rgb(101, 101, 102);
+}
+
+#interface .opt-bar .optionss .filters {
+  margin-left: 30px;
+  width: 50%;
+}
+
+#interface .opt-bar .optionss .filters i {
+  font-size: 12px;
+}
+
+#interface .opt-bar .optionss button {
+  border: 1.8px solid rgb(101, 101, 102);
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 2.3px 3px;
+}
+
+#interface .opt-bar .optionss .add {
+  padding-right: 0;
+  margin-left: 8em;
+}
+
+.board table tbody .options {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.board table tbody .options a {
+  padding: 0 4px;
+}
+
+.board table tbody .options a i {
+  color: rgb(101, 101, 102);
+}
+
+.board table tbody .options a:hover,
+.board table tbody .options a i:hover {
+  color: #140c68;
+  translate: 0 -3px;
+  transition: 0.25s ease;
+}
+
+.board {
+  width: 95.5%;
+  margin: 2rem 0 2rem 1.4rem;
+  overflow: auto;
+  background: #fffdf7;
+  border-radius: 5px;
+}
+
+.board img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.board h5 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.board p {
+  font-weight: 400;
+  font-size: 13px;
+  color: rgb(74, 75, 77);
+}
+
+.board .people {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: start;
+}
+
+.board table {
+  border-collapse: collapse;
+}
+
+.board table tr {
+  border-bottom: 1px solid #dddcdcc4;
+}
+
+.board table thead td {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: #f7f5f5;
+  text-align: start;
+  padding: 15px;
+}
+
+.board table tbody tr td {
+  padding: 10px 15px;
+}
+
+.board table tbody .people-cat {
+  align-items: center;
+}
+
+.board table tbody .people-cat p {
+  padding: 2px 10px;
+  background-color: #c52e238f;
+  display: inline-block;
+  border-radius: 40px;
+  color: rgb(36, 37, 37);
+}
+
