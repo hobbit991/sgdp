@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Sistema de Gestión Doctoral|UCI</title>
+<meta name="description"
+	content="Sistema de gestión del proceso doctoral" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+</head>
+
+<body>
+	<!--------Sección para el menú con el logo y las diferentes opciones------------>
+	<section id="menu">
+		<div class="logo">
+			<img src="images/Page 1.png" alt="" />
+		</div>
+
+		<div class="items">
+			<li class="active"><i class="fa-regular fa-clipboard"></i><a href="/">Tablero</a></li>
+			<li><i class="fa-solid fa-chart-line"></i><a href="/estadistica">Estadísticas</a></li>
+			<li><i class="fa fa-calendar"></i><a href="/calendario">Calendario</a></li>
+			<li><i class="fa-regular fa-circle-question"></i><a href="/info">Sobre</a>
+			</li>
+		</div>
+
+		<div class="sys-desc">
+			<h6>Sistema de Gestión Doctoral</h6>
+		</div>
+	</section>
+	<!---------------------------Fin del Menú---------------------------------------->
+
+	<!--Sección para la interfaz(todo lo que no es el menú lateral) de interacción--->
+	<section id="interface">
+		<div class="navigation">
+			<div class="n1">
+				<div>
+					<i id="menu-btn" class="fa-solid fa-bars"></i>
+				</div>
+				<div class="banner">
+					<img src="images/interfaz-modulos.png" alt="" />
+				</div>
+			</div>
+
+			<div class="profile">
+				<i class="fa-regular fa-bell"></i> <img
+					src="images/doctor-thumb-10.jpg" />
+			</div>
+		</div>
+
+		<div class="scrollabless">
+			<h3 class="i-name">Tablero</h3>
+			<!--Aquí comienzan las cajas de valores flotantes-->
+			<div class="values">
+				<div class="val-box">
+					<i class="fa-solid fa-user-tie"></i>
+					<div>
+						<h3 th:text="${cantSolicitantes}"></h3>
+						<span>Solicitantes</span>
+					</div>
+				</div>
+
+				<div class="val-box">
+					<i class="fa-solid fa-user-tie"></i>
+					<div>
+						<h3 th:text="${cantDoctorandos}"></h3>
+						<span>Doctorandos</span>
+					</div>
+				</div>
+
+				<div class="val-box">
+					<i class="fa-solid fa-user-graduate"></i>
+					<div>
+						<h3 th:text="${cantDoctores}"></h3>
+						<span>Doctores</span>
+					</div>
+				</div>
+
+				<div class="val-box">
+					<i class="fa-solid fa-users"></i>
+					<div>
+						<h3 th:text="${total}"></h3>
+						<span>Total</span>
+					</div>
+				</div>
+			</div>
+
+			<!--Aquí comienza la tabla con las personas-->
+			<div class="opt-bar">
+				<div class="optionss">
+					<form th:action="@{/buscar_persona}" method="get">
+						<input type="text" name="keyword" th:value="${keyword}"
+							placeholder="Inserte nombre de la persona aquí" size="50">
+
+						<a th:href="@{/}" class="btn btn-warning btn-sm mb-3">Regresar</a>
+						</td>
+
+					</form>
+
+					
+
+				</div>
+			</div>
+			<div class="board">
+				<table width="100%">
+					<thead>
+						<tr>
+							<td>Nombre</td>
+							<td>Apellidos</td>
+							<td>CI</td>
+							<td>Programa</td>
+							<td>Acción</td>
+						</tr>
+					</thead>
+
+					<h4>Solicitantes</h4>
+					<tbody>
+						<!--Aqui comienzan las filas de la tabla-->
+						<tr th:each="solicitante : ${solicitantes}"
+							th:field="${solicitante}">
+
+							<td th:text="${solicitante.nombre}"></td>
+							<td th:text="${solicitante.apellidos}"></td>
+							<td th:text="${solicitante.ci}"></td>
+							<td th:text="${solicitante.p.nombre}"></td>
+							<td>
+							<a th:href="@{/eliminar_solicitante(id_solicitante=${solicitante.id_solicitante})}">
+							<i class="fa fa-remove"></i></a> 
+							<a th:href="@{/actualizarSolicitante/{id_solicitante}(id_solicitante=${solicitante.id_solicitante})}"><i
+									class="fa fa-edit"></i></a></td>
+
+
+
+
+						</tr>
+					</tbody>
+
+				</table>
+				<br> <a href="/addsolicitante" class="btn btn-warning btn-sm mb-3">Insertar</a> <br>
+				<table width="100%">
+					<thead>
+						<tr>
+							<td>Nombre</td>
+							<td>Apellidos</td>
+							<td>CI</td>
+							<td>Tema</td>
+							<td>Acción</td>
+						</tr>
+					</thead>
+					<h4>Doctorandos</h4>
+					<tbody>
+						<!--Aqui comienzan las filas de la tabla-->
+						<tr th:each="doctorando : ${doctorandos}" th:field="${doctorando}">
+
+							<td th:text="${doctorando.nombre}"></td>
+							<td th:text="${doctorando.apellidos}"></td>
+							<td th:text="${doctorando.ci}"></td>
+							<td th:text="${doctorando.t.nombre}"></td>
+							<td>
+							<a th:href="@{/eliminar_doctorando(id_doctorando=${doctorando.id_doctorando})}">
+							<i class="fa fa-remove"></i></a> 
+							<a th:href="@{/actualizarDoctorando/{id_doctorando}(id_doctorando=${doctorando.id_doctorando})}"><i class="fa fa-edit"></i></a></td>
+
+
+
+
+						</tr>
+					</tbody>
+
+				</table>
+				<br> <a href="/adddoctorando" class="btn btn-warning btn-sm mb-3">Insertar</a> <br>
+
+				<table width="100%">
+					<thead>
+						<tr>
+							<td>Nombre</td>
+							<td>Apellidos</td>
+							<td>CI</td>
+							<td>Título</td>
+							<td></td>
+						</tr>
+					</thead>
+					<br>
+					<h4>Doctores</h4>
+					<tbody>
+						<tr th:each="doctor : ${doctores}" th:field="${doctor}">
+
+							<td th:text="${doctor.nombre}"></td>
+							<td th:text="${doctor.apellidos}"></td>
+							<td th:text="${doctor.ci}"></td>
+							<td th:text="${doctor.titulo}"></td>
+							<td>
+							<a th:href="@{/eliminar_doctor(id_doctor=${doctor.id_doctor})}">
+							<i class="fa fa-remove"></i></a> 
+						<a th:href="@{/actualizarDoctor/{id_doctor}(id_doctor=${doctor.id_doctor})}"><i class="fa fa-edit"></i></a></td>
+
+
+
+
+
+						</tr>
+
+					</tbody>
+
+				</table>
+				<br> 
+				<a href="/adddoctor" class="btn btn-warning btn-sm mb-3">Insertar</a> <br>
+			</div>
+		</div>
+	</section>
+	<!---------------------------Fin de la interfaz---------------------------------->
+	<script src="" async defer></script>
+</body>
+
+</html>

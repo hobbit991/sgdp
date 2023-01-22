@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana,sans-serif;}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #ff8000;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #ff8000;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+</style>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Sistema de Gestión Doctoral|UCI</title>
+<meta name="description"
+	content="Sistema de gestión del proceso doctoral" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+</head>
+
+<body>
+	<!--------Sección para el menú con el logo y las diferentes opciones------------>
+<section id="menu">
+		<div class="logo">
+			<img src="images/Page 1.png" alt="" />
+		</div>
+
+		<div class="items">
+			<li><i class="fa-regular fa-clipboard"></i><a href="/">Tablero</a></li>
+			<li><i class="fa-solid fa-chart-line"></i><a href="/estadistica">Estadísticas</a></li>
+			<li><i class="fa fa-calendar"></i><a href="/calendario">Calendario</a></li>
+			<li class="active "><i class="fa-regular fa-circle-question"></i><a href="/info">Sobre</a>
+			</li>
+		</div>
+
+		<div class="sys-desc">
+			<h6>Sistema de Gestión Doctoral</h6>
+		</div>
+	</section>
+	<!---------------------------Fin del Menú---------------------------------------->
+
+	<!--Sección para la interfaz(todo lo que no es el menú lateral) de interacción--->
+	<section id="interface">
+		<div class="navigation">
+			<div class="n1">
+				<div>
+					<i id="menu-btn" class="fa-solid fa-bars"></i>
+				</div>
+				<div class="banner">
+					<img src="images/interfaz-modulos.png" alt="" />
+				</div>
+			</div>
+
+			<div class="profile">
+				<i class="fa-regular fa-bell"></i> <img
+					src="images/doctor-thumb-10.jpg" />
+			</div>
+		</div>
+
+		<div class="page-wrapper">
+            <div class="content">
+                <!--Aquí va el contenido de la página principal o de bienvenida-->
+
+                <section id="contenido-encabezado-seccion">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 content_top_left">
+                                <div class="region region-content-top-top">
+              <div id="block-block-8" class="block block-block" data-container-block="">
+                      
+                        
+                <div class="title-block-arrow-down"></div>
+             
+                  
+            </div> <!-- /.block -->
+            </div>
+            <br>
+             <!-- /.region -->
+                     <h1 class="title" id="page-title">Doctorados</h1>
+                     <div class="region region-content-top-left">
+              <div id="block-block-33" class="block block-block" data-container-block="">
+                      
+                        
+                <div class="title-block-arrow-down"></div>
+              <div class="content">
+                <p>El grado científico de Doctor en Ciencias Técnicas, puede alcanzarse en nuestra institución, a través de la modalidad de dedicación parcial y la modalidad de tiempo completo, ambas en forma tutelar. La convocatoria a nuestro programa de Doctorado será anunciada oportunamente.</p>
+              </div> 
+                  
+            </div> <!-- /.block -->
+            </div>
+             <!-- /.region -->
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 content_top_right text-center">
+                                <div class="region region-content-top-right">
+              <div id="block-imageblock-21" class="block block-imageblock" data-container-block="">
+                      
+                        
+                <div class="title-block-arrow-down"></div>
+              <div class="content">
+                  <div class="block-image">
+                <img class="imageblock-image" src="doctorado.jpg" alt="">
+            
+              </div> 
+                  
+            </div> <!-- /.block -->
+            </div>
+             <!-- /.region -->
+                            </div>
+                        </div>
+                    </div>        
+                </section>
+
+                <section id="main-content">  
+                    <div id="content">
+                        <div class="container container-main-content">
+                            <div class="row">
+                                                                            <div class="col-md-12 row-content-main">
+                                       
+                                    <a id="main-content"></a>
+                                                            <div class="tabs"></div>                                                                        <a id="main-content"></a> 
+                                                            <div class="region region-content">
+              <div id="block-system-main" class="block block-system" data-container-block="">
+                      
+                        
+                <div class="title-block-arrow-down"></div>
+              <div class="content">
+                <div class="view view-cursos-de-postgrado-v1 view-id-cursos_de_postgrado_v1 view-display-id-page_3 view-dom-id-a94d71d1516128ebfaedd6f5d076df9d jquery-once-1-processed">
+                    
+              
+              
+                  <div class="view-content">
+                    <div class="views-row views-row-1 views-row-odd views-row-first views-row-last col-md-8 col-sm-12 col-xs-12 contextual-links-region">
+                  
+              <div class="views-field views-field-title">        <span class="field-content"><h2>Doctorado en Ciencias Informáticas</h2></span>  </div>  
+              <div class="views-field views-field-body">        <div class="field-content"><p class="rtecenter">&nbsp;</p>
+            <p class="rtecenter">&nbsp;</p>
+            <p class="rtecenter"><strong><em>Programa de Excelencia, acreditado por la Junta de Acreditación Nacional.<br>
+            Mención de Honor a la Calidad del Posgrado y el Doctorado en Iberoamérica otorgado por la Asociación Universitaria Iberoamericana de Posgrado (AUIP)</em></strong></p>
+            <p>&nbsp;</p>
+            <p>El grado científico de Doctor en Ciencias Técnicas en la Universidad de las Ciencias Informáticas (UCI), como institución autorizada, podrá alcanzarse a través de dos vías: la modalidad de dedicación parcial y la de tiempo completo, ambas en forma tutelar.</p>
+            <p>&nbsp;</p>
+            <h2>Etapas del doctorado:</h2>
+            <table><tbody><tr><td>
+            <p>Créditos máximos</p>
+            </td>
+            <td>
+            <p>Créditos Mínimos</p>
+            </td>
+            </tr><tr><td>
+            <p>Formación teórica - metodológica</p>
+            </td>
+            <td>
+            <p>30</p>
+            </td>
+            <td>
+            <p>26</p>
+            </td>
+            </tr><tr><td>
+            <p>Formación investigativa</p>
+            </td>
+            <td>
+            <p>84</p>
+            </td>
+            <td>
+            <p>58</p>
+            </td>
+            </tr><tr><td>
+            <p>Preparación de la tesis, predefensa y defensa</p>
+            </td>
+            <td>
+            <p>16</p>
+            </td>
+            <td>
+            <p>16</p>
+            </td>
+            </tr><tr><td>
+            <p>TOTAL DE CRÉDITOS</p>
+            </td>
+            <td>
+            <p>130</p>
+            </td>
+            <td>
+            <p>100</p>
+            </td>
+            </tr></tbody></table><p>&nbsp;</p>
+            <h2>Plan general de actividades</h2>
+            <ul><li>Participación activa en seminarios científicos (de la línea y del doctorado) donde se presenten los avances de investigación. Se realizará, al menos, dos veces al año.</li>
+            <li>Publicación de, al menos, dos artículos científicos en revistas indexadas en WoS, Scopus o Scielo.</li>
+            <li>Participación en, al menos, dos eventos internacionales.</li>
+            <li>Realización de los exámenes establecidos:
+            <ul><li>Problemas Sociales de la Ciencia y la Tecnología.</li>
+            <li>Idioma.</li>
+            <li>Especialidad (preferiblemente en el tercer año).</li>
+            </ul></li>
+            <li>Participar en cursos de posgrado de preparación metodológica y de la especialidad.</li>
+            <li>Culminar la investigación y escritura de la tesis de doctorado.</li>
+            <li>Predefensa de la tesis de doctorado.</li>
+            <li>Defensa de la tesis de doctorado ante el tribunal nacional correspondiente.</li>
+            </ul><p>&nbsp;</p>
+            <h2>Frecuencia de etapas presenciales en la UCI (para extranjeros)</h2>
+            <p>Se estiman, al menos, dos o tres estancias en el año. En total, se debe permanecer en Cuba, por un año (sumando todas las estancias).<br>
+            El doctorado dura de 3 a 4 años (depende de los avances del estudiante).</p>
+            <p>&nbsp;</p>
+            <h2>Requisitos para ingresar al doctorado:</h2>
+            <ul><li>Enviar solicitud al coordinador del programa de doctorado.</li>
+            <li>Participar en una entrevista con miembros del Comité Académico del Doctorado y de la Comisión de Grados Científicos.</li>
+            <li>Aprobar el proyecto de tesis de doctorado que debe presentar en su Seminario Científico.</li>
+            </ul><p>&nbsp;</p>
+            <h2>Datos de contacto</h2>
+            <p>Dirección de Transferencia de Tecnología<br>
+            Dirección postal: Carretera a San Antonio de los Baños, Km 2 ½, reparto Torrens, municipio Boyeros, La Habana, Cuba. CP: 19370<br>
+            Teléfonos: (+53) 78373880, 78373866, 78358019<br>
+            Correo: <a href="mailto:servicios.academicos@uci.cu">servicios.academicos@uci.cu</a></p>
+            </div>  </div>  
+              <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+              <div class="views-field views-field-field-plegable-promocional">        <div class="field-content"><span class="file"><img class="file-icon" alt="Icono PDF" title="application/pdf" src="https://www.uci.cu/modules/file/icons/application-pdf.png"> <a href="https://www.uci.cu/sites/default/files/documentos_postgrado/doctorado_en_informatica.pdf" type="application/pdf; length=1977369" title="doctorado_en_informatica.pdf">Detalles</a></span></div>  </div>  </div>
+                </div>
+              
+              
+              
+              
+              
+              
+            </div>  </div> 
+                  
+            </div> <!-- /.block -->
+            </div>
+             <!-- /.region -->
+                                    <div class="region region-content-bottom">
+              <div id="block-block-38" class="block block-block" data-container-block="">
+                      
+                        
+                <div class="title-block-arrow-down"></div>
+              <div class="content">
+                <p>&nbsp;</p>
+            <div class="datos-de-contacto-data">
+            <div class="datos-de-contacto-data-title">
+            <div class="group-detalles-contacto field-group-div">
+            <h3>Detalles de Contacto</h3>
+            </div>
+            </div>
+            <div class="datos-de-contacto-data-data">
+            <div class="datos-de-contacto-data-phone">
+            <div class="field field-name-field-telefono-contacto field-type-text field-label-hidden">
+            <div class="field-items">
+            <div class="field-item even">+53 7837 3880</div>
+            </div>
+            </div>
+            </div>
+            <div class="datos-de-contacto-data-mail">
+            <div class="field field-name-field-correo-contacto field-type-email field-label-hidden">
+            <div class="field-items">
+            <div class="field-item even"><a href="mailto:servicios.academicos@uci.cu">servicios.academicos@uci.cu</a></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+              </div> 
+                  
+            </div> <!-- /.block -->
+            </div>
+             <!-- /.region -->
+
+                        </div> 
+                    </div>
+                </section>
+
+                <p></p>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+	</section>
+	<!---------------------------Fin de la interfaz---------------------------------->
+	<script src="" async defer></script>
+</body>
+
+</html>

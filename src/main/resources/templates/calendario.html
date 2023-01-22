@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+	font-family: Tahoma;
+}
+
+header {
+	text-align: center;
+}
+
+#calendar {
+	width: 100%;	
+}
+
+#calendar a {
+	color: #ff8000;
+	text-decoration: none;
+}
+
+#calendar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#calendar li {
+	display: block;
+	float: left;
+	width:14.342%;
+	padding: 5px;
+	box-sizing:border-box;
+	border: 1px solid #ccc;
+	margin-right: -1px;
+	margin-bottom: -1px;
+}
+
+#calendar ul.weekdays {
+	height: 40px;
+	background: #ff8000;
+}
+
+#calendar ul.weekdays li {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 20px;
+	border: none !important;
+	padding: 10px 6px;
+	color: #fff;
+	font-size: 13px;
+}
+
+#calendar .days li {
+	height: 180px;
+}
+
+#calendar .days li:hover {
+	background: #d3d3d3;
+}
+
+#calendar .date {
+	text-align: center;
+	margin-bottom: 5px;
+	padding: 4px;
+	background: #333;
+	color: #fff;
+	width: 20px;
+	border-radius: 50%;
+	float: right;
+}
+
+#calendar .event {
+	clear: both;
+	display: block;
+	font-size: 13px;
+	border-radius: 4px;
+	padding: 5px;
+	margin-top: 40px;
+	margin-bottom: 5px;
+	line-height: 14px;
+	background: #e4f2f2;
+	border: 1px solid #b5dbdc;
+	color: #009aaf;
+	text-decoration: none;
+}
+
+#calendar .event-desc {
+	color: #666;
+	margin: 3px 0 7px 0;
+	text-decoration: none;	
+}
+
+#calendar .other-month {
+	background: #f5f5f5;
+	color: #666;
+}
+
+/* ============================
+				Mobile Responsiveness
+   ============================*/
+
+
+@media(max-width: 768px) {
+
+	#calendar .weekdays, #calendar .other-month {
+		display: none;
+	}
+
+	#calendar li {
+		height: auto !important;
+		border: 1px solid #ededed;
+		width: 100%;
+		padding: 10px;
+		margin-bottom: -1px;
+	}
+
+	#calendar .date {
+		float: none;
+	}
+}
+</style>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Sistema de Gestión Doctoral|UCI</title>
+<meta name="description"
+	content="Sistema de gestión del proceso doctoral" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+</head>
+
+<body>
+	<!--------Sección para el menú con el logo y las diferentes opciones------------>
+	<section id="menu">
+		<div class="logo">
+			<img src="images/Page 1.png" alt="" />
+		</div>
+
+		<div class="items">
+			<li><i class="fa-regular fa-clipboard"></i><a href="/">Tablero</a></li>
+			<li><i class="fa-solid fa-chart-line"></i><a href="/estadistica">Estadísticas</a></li>
+			<li class="active ">><i class="fa fa-calendar"></i><a href="/calendario">Calendario</a></li>
+			<li><i class="fa-regular fa-circle-question"></i><a href="/info">Sobre</a>
+			</li>
+		</div>
+
+		<div class="sys-desc">
+			<h6>Sistema de Gestión Doctoral</h6>
+		</div>
+	</section>
+	<!---------------------------Fin del Menú---------------------------------------->
+
+	<!--Sección para la interfaz(todo lo que no es el menú lateral) de interacción--->
+	<section id="interface">
+		<div class="navigation">
+			<div class="n1">
+				<div>
+					<i id="menu-btn" class="fa-solid fa-bars"></i>
+				</div>
+				<div class="banner">
+					<img src="images/interfaz-modulos.png" alt="" />
+				</div>
+			</div>
+
+			<div class="profile">
+				<i class="fa-regular fa-bell"></i> <img
+					src="images/doctor-thumb-10.jpg" />
+			</div>
+		</div>
+
+		<div class="scrollabless">
+			<h3 class="i-name">Calendario</h3>
+			<!--Aquí comienzan las cajas de valores flotantes-->
+			<div id="calendar-wrap">
+    		<header>
+    			<h1>Enero 2023</h1>
+    		</header>
+    		<div id="calendar">
+    			<ul class="weekdays">
+    				<li>Domingo</li>
+    				<li>Lunes</li>
+    				<li>Martes</li>
+    				<li>Miércoles</li>
+    				<li>Jueves</li>
+    				<li>Viernes</li>
+    				<li>Sábado</li>
+    			</ul>
+
+    			<!-- Days from previous month -->
+
+    			<ul class="days">
+    				
+    			
+    				
+    			
+    				<!-- Days in current month -->
+
+    				<li class="day">
+    					<div class="date">1</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">2</div>
+    					<div class="event">
+    						<div class="event-desc">
+    							Inscripción de Solicitudes
+    						</div>
+    						<div class="event-time">
+    								8:00am a 4:30pm
+
+    						</div>
+    					</div>     					
+    				</li>
+    			</ul>
+
+    				<!-- Row #2 -->
+
+    			<ul class="days">
+    				<li class="day">
+    					<div class="date">3</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">4</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">5</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">6</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">7</div>
+    				    					
+    				</li>
+    				<li class="day">
+    					<div class="date">8</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">9</div>    					
+    				</li>
+    			</ul>
+
+    				<!-- Row #3 -->
+
+    			<ul class="days">
+    				<li class="day">
+    					<div class="date">10</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">11</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">12</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">13</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">14</div><div class="event">
+    						<div class="event-desc">
+    							Pre-Defensa Doctoral
+    						</div>
+    						<div class="event-time">
+    							8:00am a 6:00pm
+    						</div>
+    					</div>     					
+    				</li>
+    				<li class="day">
+    					<div class="date">15</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">16</div>    					
+    				</li>
+    			</ul>
+
+    				<!-- Row #4 -->
+
+    			<ul class="days">
+    				<li class="day">
+    					<div class="date">17</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">18</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">19</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">20</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">21</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">22</div>
+    					<div class="event">
+    						<div class="event-desc">
+    							Defensa Doctoral
+    						</div>
+    						<div class="event-time">
+    							8:00am a 6:00pm
+    						</div>
+    					</div>     					
+    				</li>
+    				<li class="day">
+    					<div class="date">23</div>    					
+    				</li>
+    			</ul>
+
+    					<!-- Row #5 -->
+
+    			<ul class="days">
+    				<li class="day">
+    					<div class="date">24</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">25</div>
+    					    					
+    				</li>
+    				<li class="day">
+    					<div class="date">26</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">27</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">28</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">29</div>    					
+    				</li>
+    				<li class="day">
+    					<div class="date">30</div>    					
+    				</li>
+    					<li class="day">
+    					<div class="date">31</div> 
+    					<div class="event">
+    						<div class="event-desc">
+    							Entrega de títulos
+    						</div>
+    						<div class="event-time">
+    							10:00am to 2:00pm
+    						</div>
+    					</div>    					
+    				</li>
+    			</ul>
+
+    			<!-- Row #6 -->
+
+    			
+
+    		</div><!-- /. calendar -->
+    	</div><!-- /. wrap -->
+
+	</section>
+	<!---------------------------Fin de la interfaz---------------------------------->
+	<script src="" async defer></script>
+</body>
+
+</html>
